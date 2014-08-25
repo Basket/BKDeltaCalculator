@@ -1,15 +1,48 @@
-// Copyright 2014-present 650 Industries. All rights reserved.
+// Copyright 2014-present 650 Industries.
+// Copyright 2014-present Andrew Toulouse.
 
 #import "BKDeltaCalculator.h"
 
-NSString * const BKValueChangeAddedKey = @"BKValueChangeAddedKey";
-NSString * const BKValueChangeMovedKey = @"BKValueChangeMovedKey";
-NSString * const BKValueChangeRemovedKey = @"BKValueChangeRemovedKey";
-NSString * const BKValueChangeUnchangedKey = @"BKValueChangeUnchangedKey";
+#import "BKDelta.h"
+#import "BKDelta_Internal.h"
 
-@implementation BKDeltaCalculator
+const delta_calculator_equality_test_t BKDeltaCalculatorStrictEqualityTest = ^BOOL(id a, id b) {
+    return a == b;
+};
 
-+ (NSDictionary *)resolveDifferencesBetweenOldArray:(NSArray *)oldArray newArray:(NSArray *)newArray
+@implementation BKDeltaCalculator {
+    delta_calculator_equality_test_t _equalityTest;
+}
+
++ (instancetype)defaultCalculator
+{
+    static BKDeltaCalculator *INSTANCE;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        INSTANCE = [[BKDeltaCalculator alloc] init];
+    });
+
+    return INSTANCE;
+}
+
++ (instancetype)deltaCalculatorWithEqualityTest:(delta_calculator_equality_test_t)equalityTest
+{
+    return [[BKDeltaCalculator alloc] initWithEqualityTest:equalityTest];
+}
+
+- (instancetype)init
+{
+    return [self initWithEqualityTest:BKDeltaCalculatorStrictEqualityTest];
+}
+
+- (instancetype)initWithEqualityTest:(delta_calculator_equality_test_t)equalityTest
+{
+    if (self = [super init]) {
+    }
+    return self;
+}
+
+- (BKDelta *)deltaFromOldArray:(NSArray *)oldArray toNewArray:(NSArray *)newArray
 {
     // Index set for objects...
     NSMutableIndexSet *unchangedIndices = [NSMutableIndexSet indexSet]; // ...with identical positions
@@ -22,7 +55,7 @@ NSString * const BKValueChangeUnchangedKey = @"BKValueChangeUnchangedKey";
         if (index >= newArray.count) { // Bounds check. No unchanged indices possible when out of range
             break;
         }
-        if (oldArray[index] == newArray[index]) { // using _exact_ equivalence
+        if (_equalityTest(oldArray[index], newArray[index])) {
             [unchangedIndices addIndex:index];
         }
     }
@@ -34,7 +67,9 @@ NSString * const BKValueChangeUnchangedKey = @"BKValueChangeUnchangedKey";
         }
 
         id newItem = newArray[newIndex];
-        NSUInteger oldIndex = [oldArray indexOfObjectIdenticalTo:newItem];
+        NSUInteger oldIndex = [oldArray indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+            return _equalityTest(obj, newItem);
+        }];
         if (!oldArray || oldIndex == NSNotFound) {
             [addedNewIndices addIndex:newIndex];
         } else {
@@ -45,18 +80,18 @@ NSString * const BKValueChangeUnchangedKey = @"BKValueChangeUnchangedKey";
     // Removed
     for (NSUInteger oldIndex = 0; oldIndex < oldArray.count; oldIndex++) {
         id oldItem = oldArray[oldIndex];
-        NSUInteger newIndex = [newArray indexOfObjectIdenticalTo:oldItem];
+        NSUInteger newIndex = [newArray indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+            return _equalityTest(obj, oldItem);
+        }];
         if (newIndex == NSNotFound) {
             [removedOldIndices addIndex:oldIndex];
         }
     }
 
-    return @{
-             BKValueChangeUnchangedKey: [unchangedIndices copy],
-             BKValueChangeMovedKey: [movedIndices copy],
-             BKValueChangeAddedKey: [addedNewIndices copy],
-             BKValueChangeRemovedKey: [removedOldIndices copy],
-             };
+    return [BKDelta deltaWithAddedIndices:[addedNewIndices copy]
+                           removedIndices:[removedOldIndices copy]
+                          movedIndexPairs:[movedIndices copy]
+                         unchangedIndices:[unchangedIndices copy]];
 }
 
 @end

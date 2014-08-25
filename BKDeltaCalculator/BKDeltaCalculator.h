@@ -1,29 +1,29 @@
-// Copyright 2014-present 650 Industries. All rights reserved.
+// Copyright 2014-present 650 Industries.
+// Copyright 2014-present Andrew Toulouse.
 
 @import Foundation;
 
-NSString * const BKValueChangeAddedKey;
-NSString * const BKValueChangeMovedKey;
-NSString * const BKValueChangeRemovedKey;
-NSString * const BKValueChangeUnchangedKey;
+@class BKDelta;
 
-/**
- `BKDeltaCalculator` takes two arrays as input and outputs a dictionary with the following keys:
+typedef BOOL (^delta_calculator_equality_test_t)(id a, id b);
 
- * `BKValueChangeAddedKey`: an index set in the new array's index space representing elements that were added to the new array.
- * `BKValueChangeMovedKey`: an array containing pairs of indices representing elements that moved position.
- * `BKValueChangeRemovedKey`: an index set in the old array's index space representing elements that were removed from the old array.
- * `BKValueChangeUnchangedKey`: an index set with indices representing elements in the same position in both arrays
- */
+const delta_calculator_equality_test_t BKDeltaCalculatorStrictEqualityTest;
+
 @interface BKDeltaCalculator : NSObject
+
++ (instancetype)defaultCalculator;
+
++ (instancetype)deltaCalculatorWithEqualityTest:(delta_calculator_equality_test_t)equalityTest;
+
+- (instancetype)initWithEqualityTest:(delta_calculator_equality_test_t)equalityTest;
 
 /**
  Resolve differences between two versions of an array.
  
  @param oldArray the array representing the "old" version of the array
  @param newArray the array representing the "new" version of the array.
- @return A dictionary containing NSIndexSets representing added, moved, removed, and unchanged elements.
+ @return A delta object containing NSIndexSets representing added, moved, removed, and unchanged elements.
  */
-+ (NSDictionary *)resolveDifferencesBetweenOldArray:(NSArray *)oldArray newArray:(NSArray *)newArray;
+- (BKDelta *)deltaFromOldArray:(NSArray *)oldArray toNewArray:(NSArray *)newArray;
 
 @end

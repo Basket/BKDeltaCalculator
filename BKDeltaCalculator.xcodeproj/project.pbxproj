@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6B168AF819ABBCD20040751B /* BKDeltaCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B168AF719ABBCD20040751B /* BKDeltaCalculator.m */; };
+		6BB9564619ABC52100CBD3BB /* BKDelta.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB9564519ABC52100CBD3BB /* BKDelta.m */; };
 		6BEE09EE19870A1800D73B41 /* BKDeltaCalculator.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6BEE09ED19870A1800D73B41 /* BKDeltaCalculator.h */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,9 @@
 
 /* Begin PBXFileReference section */
 		6B168AF719ABBCD20040751B /* BKDeltaCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKDeltaCalculator.m; sourceTree = "<group>"; };
+		6BB9564419ABC52100CBD3BB /* BKDelta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKDelta.h; sourceTree = "<group>"; };
+		6BB9564519ABC52100CBD3BB /* BKDelta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKDelta.m; sourceTree = "<group>"; };
+		6BB9564719ABC6AC00CBD3BB /* BKDelta_Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BKDelta_Internal.h; sourceTree = "<group>"; };
 		6BEE09EA19870A1800D73B41 /* libBKDeltaCalculator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBKDeltaCalculator.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BEE09ED19870A1800D73B41 /* BKDeltaCalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BKDeltaCalculator.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,6 +64,9 @@
 		6BEE09EC19870A1800D73B41 /* BKDeltaCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				6BB9564419ABC52100CBD3BB /* BKDelta.h */,
+				6BB9564519ABC52100CBD3BB /* BKDelta.m */,
+				6BB9564719ABC6AC00CBD3BB /* BKDelta_Internal.h */,
 				6BEE09ED19870A1800D73B41 /* BKDeltaCalculator.h */,
 				6B168AF719ABBCD20040751B /* BKDeltaCalculator.m */,
 			);
@@ -122,6 +129,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BB9564619ABC52100CBD3BB /* BKDelta.m in Sources */,
 				6B168AF819ABBCD20040751B /* BKDeltaCalculator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
