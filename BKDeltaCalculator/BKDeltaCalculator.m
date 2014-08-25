@@ -13,8 +13,7 @@ NSString * const BKValueChangeUnchangedKey = @"BKValueChangeUnchangedKey";
 {
     // Index set for objects...
     NSMutableIndexSet *unchangedIndices = [NSMutableIndexSet indexSet]; // ...with identical positions
-    NSMutableIndexSet *movedOldIndices = [NSMutableIndexSet indexSet]; // ...which moved, old index
-    NSMutableIndexSet *movedNewIndices = [NSMutableIndexSet indexSet]; // ...which moved, new index
+    NSMutableArray *movedIndices = [NSMutableArray array]; // ...which moved, in pairs [old index, new index]
     NSMutableIndexSet *addedNewIndices = [NSMutableIndexSet indexSet]; // ...which were added, new index
     NSMutableIndexSet *removedOldIndices = [NSMutableIndexSet indexSet]; // ...which were deleted, old index
 
@@ -39,8 +38,7 @@ NSString * const BKValueChangeUnchangedKey = @"BKValueChangeUnchangedKey";
         if (!oldArray || oldIndex == NSNotFound) {
             [addedNewIndices addIndex:newIndex];
         } else {
-            [movedOldIndices addIndex:oldIndex];
-            [movedNewIndices addIndex:newIndex];
+            [movedIndices addObject:@[@(oldIndex), @(newIndex)]];
         }
     }
 
@@ -55,7 +53,7 @@ NSString * const BKValueChangeUnchangedKey = @"BKValueChangeUnchangedKey";
 
     return @{
              BKValueChangeUnchangedKey: [unchangedIndices copy],
-             BKValueChangeMovedKey: @[[movedOldIndices copy], [movedNewIndices copy]],
+             BKValueChangeMovedKey: [movedIndices copy],
              BKValueChangeAddedKey: [addedNewIndices copy],
              BKValueChangeRemovedKey: [removedOldIndices copy],
              };

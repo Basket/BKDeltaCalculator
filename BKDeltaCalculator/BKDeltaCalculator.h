@@ -11,7 +11,7 @@ NSString * const BKValueChangeUnchangedKey;
  `BKDeltaCalculator` takes two arrays as input and outputs a dictionary with the following keys:
 
  * `BKValueChangeAddedKey`: an index set in the new array's index space representing elements that were added to the new array.
- * `BKValueChangeMovedKey`: an array containing an index set in the old array's index space followed by an index set of equivalent size in the new array's index space, both representing elements that changed position.
+ * `BKValueChangeMovedKey`: an array containing pairs of indices representing elements that moved position.
  * `BKValueChangeRemovedKey`: an index set in the old array's index space representing elements that were removed from the old array.
  * `BKValueChangeUnchangedKey`: an index set with indices representing elements in the same position in both arrays
  */
