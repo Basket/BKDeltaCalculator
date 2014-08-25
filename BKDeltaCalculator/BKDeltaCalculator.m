@@ -36,7 +36,7 @@ NSString * const BKValueChangeUnchangedKey = @"BKValueChangeUnchangedKey";
 
         id newItem = newArray[newIndex];
         NSUInteger oldIndex = [oldArray indexOfObjectIdenticalTo:newItem];
-        if (oldIndex == NSNotFound) {
+        if (!oldArray || oldIndex == NSNotFound) {
             [addedNewIndices addIndex:newIndex];
         } else {
             [movedOldIndices addIndex:oldIndex];
