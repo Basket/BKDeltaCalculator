@@ -38,6 +38,7 @@ const delta_calculator_equality_test_t BKDeltaCalculatorStrictEqualityTest = ^BO
 - (instancetype)initWithEqualityTest:(delta_calculator_equality_test_t)equalityTest
 {
     if (self = [super init]) {
+        _equalityTest = equalityTest;
     }
     return self;
 }
