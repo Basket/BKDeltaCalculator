@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "BKDeltaCalculator"
-  s.version          = "1.0.0"
+  s.version          = "1.0.1"
   s.summary          = "Lightweight Objective-C library to transform a pair of collections into sets of changes"
   s.description      = "Lightweight Objective-C library to transform a pair of collections into sets of changes, primarily for use in dynamically-updated table and collection views"
   s.homepage         = "https://github.com/Basket/BKDeltaCalculator"
