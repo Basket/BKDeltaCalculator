@@ -54,4 +54,30 @@
         [tableView moveRowAtIndexPath:fromIndexPath toIndexPath:toIndexPath];
     }];
 }
+
+- (void)applyUpdatesToCollectionView:(UICollectionView *)collectionView inSection:(NSUInteger)section
+{
+    NSMutableArray *removedIndexPaths = [NSMutableArray arrayWithCapacity:_removedIndices.count];
+    [_removedIndices enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL *stop) {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:idx inSection:section];
+        [removedIndexPaths addObject:indexPath];
+    }];
+
+    [collectionView deleteItemsAtIndexPaths:removedIndexPaths];
+
+    NSMutableArray *addedIndexPaths = [NSMutableArray arrayWithCapacity:_addedIndices.count];
+    [_addedIndices enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL *stop) {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:idx inSection:section];
+        [addedIndexPaths addObject:indexPath];
+    }];
+
+    [collectionView insertItemsAtIndexPaths:addedIndexPaths];
+
+    [_movedIndexPairs enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSNumber *fromIndex = [obj objectAtIndex:0], *toIndex = [obj objectAtIndex:1];
+        NSIndexPath *fromIndexPath = [NSIndexPath indexPathForRow:[fromIndex unsignedIntegerValue] inSection:section];
+        NSIndexPath *toIndexPath = [NSIndexPath indexPathForRow:[toIndex unsignedIntegerValue] inSection:section];
+        [collectionView moveItemAtIndexPath:fromIndexPath toIndexPath:toIndexPath];
+    }];
+}
 @end

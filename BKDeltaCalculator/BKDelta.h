@@ -11,4 +11,6 @@
 @property (nonatomic, copy, readonly) NSIndexSet *unchangedIndices;
 
 - (void)applyUpdatesToTableView:(UITableView *)tableView inSection:(NSUInteger)section withRowAnimation:(UITableViewRowAnimation)rowAnimation;
+- (void)applyUpdatesToCollectionView:(UICollectionView *)collectionView inSection:(NSUInteger)section;
+
 @end

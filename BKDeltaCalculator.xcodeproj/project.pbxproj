@@ -17,6 +17,7 @@
 		6BD1184E1A8DE48B0069B52B /* BKDeltaCalculatorExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD1184D1A8DE48B0069B52B /* BKDeltaCalculatorExampleTests.m */; };
 		6BD118581A8DF0F70069B52B /* BKDelta.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6BB9564419ABC52100CBD3BB /* BKDelta.h */; };
 		6BD1185C1A8DF1C40069B52B /* libBKDeltaCalculator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BEE09EA19870A1800D73B41 /* libBKDeltaCalculator.a */; };
+		6BD1185F1A8DF6BD0069B52B /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD1185E1A8DF6BD0069B52B /* CollectionViewController.m */; };
 		6BEE09EE19870A1800D73B41 /* BKDeltaCalculator.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6BEE09ED19870A1800D73B41 /* BKDeltaCalculator.h */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,8 @@
 		6BD118471A8DE48B0069B52B /* BKDeltaCalculatorExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BKDeltaCalculatorExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BD1184C1A8DE48B0069B52B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BD1184D1A8DE48B0069B52B /* BKDeltaCalculatorExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BKDeltaCalculatorExampleTests.m; sourceTree = "<group>"; };
+		6BD1185D1A8DF6BD0069B52B /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		6BD1185E1A8DF6BD0069B52B /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		6BEE09EA19870A1800D73B41 /* libBKDeltaCalculator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBKDeltaCalculator.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BEE09ED19870A1800D73B41 /* BKDeltaCalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BKDeltaCalculator.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +106,8 @@
 			children = (
 				6BD118351A8DE48B0069B52B /* AppDelegate.h */,
 				6BD118361A8DE48B0069B52B /* AppDelegate.m */,
+				6BD1185D1A8DF6BD0069B52B /* CollectionViewController.h */,
+				6BD1185E1A8DF6BD0069B52B /* CollectionViewController.m */,
 				6BD1183E1A8DE48B0069B52B /* Images.xcassets */,
 				6BD118401A8DE48B0069B52B /* LaunchScreen.xib */,
 				6BD118311A8DE48B0069B52B /* Supporting Files */,
@@ -291,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BD1185F1A8DF6BD0069B52B /* CollectionViewController.m in Sources */,
 				6BD1183A1A8DE48B0069B52B /* TableViewController.m in Sources */,
 				6BD118371A8DE48B0069B52B /* AppDelegate.m in Sources */,
 				6BD118341A8DE48B0069B52B /* main.m in Sources */,
@@ -507,6 +513,7 @@
 				6BD118501A8DE48B0069B52B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6BD118541A8DE48B0069B52B /* Build configuration list for PBXNativeTarget "BKDeltaCalculatorExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +522,7 @@
 				6BD118521A8DE48B0069B52B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6BEE09E519870A1800D73B41 /* Build configuration list for PBXProject "BKDeltaCalculator" */ = {
 			isa = XCConfigurationList;
