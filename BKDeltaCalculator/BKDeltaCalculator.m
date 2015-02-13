@@ -47,10 +47,9 @@ const delta_calculator_equality_test_t BKDeltaCalculatorStrictEqualityTest = ^BO
 {
     // Index set for objects...
     NSMutableIndexSet *unchangedIndices = [NSMutableIndexSet indexSet]; // ...with identical positions
+    NSMutableArray *movedIndices = [NSMutableArray array]; // ...which moved, in pairs [old index, new index]
     NSMutableIndexSet *addedNewIndices = [NSMutableIndexSet indexSet]; // ...which were added, new index
     NSMutableIndexSet *removedOldIndices = [NSMutableIndexSet indexSet]; // ...which were deleted, old index
-    // Indices of items that moved, in pairs [from index, to index], after removing and adding items
-    NSMutableArray *movedIndices = [NSMutableArray array];
 
     // Unchanged
     for (NSUInteger index = 0; index < oldArray.count; index++) {
@@ -62,18 +61,7 @@ const delta_calculator_equality_test_t BKDeltaCalculatorStrictEqualityTest = ^BO
         }
     }
 
-    // Removed
-    for (NSUInteger oldIndex = 0; oldIndex < oldArray.count; oldIndex++) {
-        id oldItem = oldArray[oldIndex];
-        NSUInteger newIndex = [newArray indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
-            return _equalityTest(obj, oldItem);
-        }];
-        if (newIndex == NSNotFound) {
-            [removedOldIndices addIndex:oldIndex];
-        }
-    }
-
-    // Added
+    // Moved and added
     for (NSUInteger newIndex = 0; newIndex < newArray.count; newIndex++) {
         if ([unchangedIndices containsIndex:newIndex]) {
             continue;
@@ -85,26 +73,19 @@ const delta_calculator_equality_test_t BKDeltaCalculatorStrictEqualityTest = ^BO
         }];
         if (!oldArray || oldIndex == NSNotFound) {
             [addedNewIndices addIndex:newIndex];
+        } else {
+            [movedIndices addObject:@[@(oldIndex), @(newIndex)]];
         }
     }
 
-    // Moved (after removing and adding)
-    NSMutableArray *simulatedArray = [oldArray mutableCopy];
-    [simulatedArray removeObjectsAtIndexes:removedOldIndices];
-    [simulatedArray insertObjects:[newArray objectsAtIndexes:addedNewIndices] atIndexes:addedNewIndices];
-    for (NSUInteger fromIndex = 0; fromIndex < simulatedArray.count; fromIndex++) {
-        if ([unchangedIndices containsIndex:fromIndex]) {
-            continue;
-        }
-
-        id movedItem = simulatedArray[fromIndex];
-        NSUInteger toIndex = [newArray indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
-            return _equalityTest(obj, movedItem);
+    // Removed
+    for (NSUInteger oldIndex = 0; oldIndex < oldArray.count; oldIndex++) {
+        id oldItem = oldArray[oldIndex];
+        NSUInteger newIndex = [newArray indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+            return _equalityTest(obj, oldItem);
         }];
-        NSAssert(toIndex != NSNotFound, @"Item %@ is missing from the new array", movedItem);
-        // An item may have the same index but not be in the unchanged index set if it is new
-        if (fromIndex != toIndex) {
-            [movedIndices addObject:@[@(fromIndex), @(toIndex)]];
+        if (newIndex == NSNotFound) {
+            [removedOldIndices addIndex:oldIndex];
         }
     }
 
