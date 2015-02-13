@@ -28,4 +28,30 @@
     }
     return self;
 }
+
+- (void)applyUpdatesToTableView:(UITableView *)tableView inSection:(NSUInteger)section withRowAnimation:(UITableViewRowAnimation)rowAnimation
+{
+    NSMutableArray *removedIndexPaths = [NSMutableArray arrayWithCapacity:_removedIndices.count];
+    [_removedIndices enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL *stop) {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:idx inSection:section];
+        [removedIndexPaths addObject:indexPath];
+    }];
+    
+    [tableView deleteRowsAtIndexPaths:removedIndexPaths withRowAnimation:rowAnimation];
+    
+    NSMutableArray *addedIndexPaths = [NSMutableArray arrayWithCapacity:_addedIndices.count];
+    [_addedIndices enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL *stop) {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:idx inSection:section];
+        [addedIndexPaths addObject:indexPath];
+    }];
+    
+    [tableView insertRowsAtIndexPaths:addedIndexPaths withRowAnimation:rowAnimation];
+    
+    [_movedIndexPairs enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSNumber *fromIndex = [obj objectAtIndex:0], *toIndex = [obj objectAtIndex:1];
+        NSIndexPath *fromIndexPath = [NSIndexPath indexPathForRow:[fromIndex unsignedIntegerValue] inSection:section];
+        NSIndexPath *toIndexPath = [NSIndexPath indexPathForRow:[toIndex unsignedIntegerValue] inSection:section];
+        [tableView moveRowAtIndexPath:fromIndexPath toIndexPath:toIndexPath];
+    }];
+}
 @end
