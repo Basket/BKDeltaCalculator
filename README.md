@@ -23,13 +23,16 @@ You can apply BKDelta to a UITableView or UICollectionView when the old array re
 ```objc
 // With a UITableView:
 [tableView beginUpdates];
-[delta applyUpdatesToTableView:tableView];
+BKDelta *delta = [[BKDeltaCalculator defaultCalculator] deltaFromOldArray:_items toNewArray:newItems];
+[delta applyUpdatesToTableView:tableView inSection:0 withRowAnimation:UITableViewRowAnimationFade];
+_items = [newItems copy];
 [tableView endUpdates];
 
 // With a UICollectionView:
-[collectionView beginUpdates];
-[delta applyUpdatesToCollectionView:collectionView];
-[collectionView endUpdates];
+[collectionView performBatchUpdates:^{
+  [delta applyUpdatesToCollectionView:collectionView inSection:0];
+  _items = [newItems copy];
+} completion:nil];
 ```
 
 ### Equality Checks
