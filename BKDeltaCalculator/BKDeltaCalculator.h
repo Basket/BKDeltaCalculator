@@ -7,7 +7,7 @@
 
 typedef BOOL (^delta_calculator_equality_test_t)(id a, id b);
 
-const delta_calculator_equality_test_t BKDeltaCalculatorStrictEqualityTest;
+extern const delta_calculator_equality_test_t BKDeltaCalculatorStrictEqualityTest;
 
 @interface BKDeltaCalculator : NSObject
 
