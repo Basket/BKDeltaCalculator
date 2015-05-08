@@ -1,7 +1,7 @@
 // Copyright 2014-present 650 Industries.
 // Copyright 2014-present Andrew Toulouse.
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 
 @class BKDelta;
 
