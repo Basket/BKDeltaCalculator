@@ -34,6 +34,20 @@
                ReferencedContainer = "container:BKDeltaCalculator.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6B7761401B1242CC00D24AFE"
+               BuildableName = "BKDeltaCalculatorTests.xctest"
+               BlueprintName = "BKDeltaCalculatorTests"
+               ReferencedContainer = "container:BKDeltaCalculator.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -49,6 +63,16 @@
                BlueprintIdentifier = "6BD118461A8DE48B0069B52B"
                BuildableName = "BKDeltaCalculatorExampleTests.xctest"
                BlueprintName = "BKDeltaCalculatorExampleTests"
+               ReferencedContainer = "container:BKDeltaCalculator.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6B7761401B1242CC00D24AFE"
+               BuildableName = "BKDeltaCalculatorTests.xctest"
+               BlueprintName = "BKDeltaCalculatorTests"
                ReferencedContainer = "container:BKDeltaCalculator.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -72,7 +96,8 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6BD1182E1A8DE48B0069B52B"
@@ -90,7 +115,8 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6BD1182E1A8DE48B0069B52B"

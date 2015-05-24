@@ -1,6 +1,6 @@
 // Copyright 2014-present Andrew Toulouse.
 
-#import "BKDelta.h"
+#import <BKDeltaCalculator/BKDelta.h>
 
 @interface BKDelta ()
 

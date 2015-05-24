@@ -2,8 +2,13 @@
 // Copyright 2014-present Andrew Toulouse.
 
 #import <Foundation/Foundation.h>
+#import <BKDeltaCalculator/BKDelta.h>
 
-@class BKDelta;
+//! Project version number for BKDeltaCalculator.
+FOUNDATION_EXPORT double BKDeltaCalculatorVersionNumber;
+
+//! Project version string for BKDeltaCalculator.
+FOUNDATION_EXPORT const unsigned char BKDeltaCalculatorVersionString[];
 
 typedef BOOL (^delta_calculator_equality_test_t)(id a, id b);
 

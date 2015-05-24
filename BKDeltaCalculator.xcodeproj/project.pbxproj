@@ -7,21 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B168AF819ABBCD20040751B /* BKDeltaCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B168AF719ABBCD20040751B /* BKDeltaCalculator.m */; };
-		6BB9564619ABC52100CBD3BB /* BKDelta.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB9564519ABC52100CBD3BB /* BKDelta.m */; };
+		6B7761421B1242CC00D24AFE /* BKDeltaCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7761371B1242CB00D24AFE /* BKDeltaCalculator.framework */; };
+		6B77614B1B1242CC00D24AFE /* BKDeltaCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B77614A1B1242CC00D24AFE /* BKDeltaCalculatorTests.m */; };
+		6B77614E1B1242CC00D24AFE /* BKDeltaCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7761371B1242CB00D24AFE /* BKDeltaCalculator.framework */; };
+		6B77614F1B1242CC00D24AFE /* BKDeltaCalculator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7761371B1242CB00D24AFE /* BKDeltaCalculator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6B77615A1B12436400D24AFE /* BKDelta.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB9564519ABC52100CBD3BB /* BKDelta.m */; };
+		6B77615B1B12436400D24AFE /* BKDeltaCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B168AF719ABBCD20040751B /* BKDeltaCalculator.m */; };
+		6B77615C1B12436E00D24AFE /* BKDelta.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BB9564419ABC52100CBD3BB /* BKDelta.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B77615D1B12436E00D24AFE /* BKDelta_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BB9564719ABC6AC00CBD3BB /* BKDelta_Internal.h */; };
+		6B77615E1B12436E00D24AFE /* BKDeltaCalculator.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BEE09ED19870A1800D73B41 /* BKDeltaCalculator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6BD118341A8DE48B0069B52B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD118331A8DE48B0069B52B /* main.m */; };
 		6BD118371A8DE48B0069B52B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD118361A8DE48B0069B52B /* AppDelegate.m */; };
 		6BD1183A1A8DE48B0069B52B /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD118391A8DE48B0069B52B /* TableViewController.m */; };
 		6BD1183F1A8DE48B0069B52B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BD1183E1A8DE48B0069B52B /* Images.xcassets */; };
 		6BD118421A8DE48B0069B52B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD118401A8DE48B0069B52B /* LaunchScreen.xib */; };
 		6BD1184E1A8DE48B0069B52B /* BKDeltaCalculatorExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD1184D1A8DE48B0069B52B /* BKDeltaCalculatorExampleTests.m */; };
-		6BD118581A8DF0F70069B52B /* BKDelta.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6BB9564419ABC52100CBD3BB /* BKDelta.h */; };
-		6BD1185C1A8DF1C40069B52B /* libBKDeltaCalculator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BEE09EA19870A1800D73B41 /* libBKDeltaCalculator.a */; };
 		6BD1185F1A8DF6BD0069B52B /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD1185E1A8DF6BD0069B52B /* CollectionViewController.m */; };
-		6BEE09EE19870A1800D73B41 /* BKDeltaCalculator.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6BEE09ED19870A1800D73B41 /* BKDeltaCalculator.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6B7761431B1242CC00D24AFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BEE09E219870A1800D73B41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B7761361B1242CB00D24AFE;
+			remoteInfo = BKDeltaCalculator;
+		};
+		6B7761451B1242CC00D24AFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BEE09E219870A1800D73B41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BD1182E1A8DE48B0069B52B;
+			remoteInfo = BKDeltaCalculatorExample;
+		};
+		6B77614C1B1242CC00D24AFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BEE09E219870A1800D73B41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B7761361B1242CB00D24AFE;
+			remoteInfo = BKDeltaCalculator;
+		};
 		6BD118481A8DE48B0069B52B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6BEE09E219870A1800D73B41 /* Project object */;
@@ -29,31 +54,29 @@
 			remoteGlobalIDString = 6BD1182E1A8DE48B0069B52B;
 			remoteInfo = BKDeltaCalculatorExample;
 		};
-		6BD1185A1A8DF1120069B52B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6BEE09E219870A1800D73B41 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6BEE09E919870A1800D73B41;
-			remoteInfo = BKDeltaCalculator;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		6BEE09E819870A1800D73B41 /* CopyFiles */ = {
+		6B7761531B1242CC00D24AFE /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
+			dstPath = "";
+			dstSubfolderSpec = 10;
 			files = (
-				6BD118581A8DF0F70069B52B /* BKDelta.h in CopyFiles */,
-				6BEE09EE19870A1800D73B41 /* BKDeltaCalculator.h in CopyFiles */,
+				6B77614F1B1242CC00D24AFE /* BKDeltaCalculator.framework in Embed Frameworks */,
 			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6B168AF719ABBCD20040751B /* BKDeltaCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKDeltaCalculator.m; sourceTree = "<group>"; };
+		6B7761371B1242CB00D24AFE /* BKDeltaCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BKDeltaCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B7761411B1242CC00D24AFE /* BKDeltaCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BKDeltaCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B7761491B1242CC00D24AFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B77614A1B1242CC00D24AFE /* BKDeltaCalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BKDeltaCalculatorTests.m; sourceTree = "<group>"; };
+		6B7761581B1242F000D24AFE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BB9564419ABC52100CBD3BB /* BKDelta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKDelta.h; sourceTree = "<group>"; };
 		6BB9564519ABC52100CBD3BB /* BKDelta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKDelta.m; sourceTree = "<group>"; };
 		6BB9564719ABC6AC00CBD3BB /* BKDelta_Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BKDelta_Internal.h; sourceTree = "<group>"; };
@@ -71,16 +94,30 @@
 		6BD1184D1A8DE48B0069B52B /* BKDeltaCalculatorExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BKDeltaCalculatorExampleTests.m; sourceTree = "<group>"; };
 		6BD1185D1A8DF6BD0069B52B /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		6BD1185E1A8DF6BD0069B52B /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
-		6BEE09EA19870A1800D73B41 /* libBKDeltaCalculator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBKDeltaCalculator.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BEE09ED19870A1800D73B41 /* BKDeltaCalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BKDeltaCalculator.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6B7761331B1242CB00D24AFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B77613E1B1242CC00D24AFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B7761421B1242CC00D24AFE /* BKDeltaCalculator.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6BD1182C1A8DE48B0069B52B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BD1185C1A8DF1C40069B52B /* libBKDeltaCalculator.a in Frameworks */,
+				6B77614E1B1242CC00D24AFE /* BKDeltaCalculator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,26 +128,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6BEE09E719870A1800D73B41 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B7761471B1242CC00D24AFE /* BKDeltaCalculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				6B7761481B1242CC00D24AFE /* Supporting Files */,
+				6B77614A1B1242CC00D24AFE /* BKDeltaCalculatorTests.m */,
+			);
+			path = BKDeltaCalculatorTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		6B7761481B1242CC00D24AFE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B7761491B1242CC00D24AFE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6B7761571B1242E100D24AFE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B7761581B1242F000D24AFE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		6BD118301A8DE48B0069B52B /* BKDeltaCalculatorExample */ = {
 			isa = PBXGroup;
 			children = (
+				6BD118311A8DE48B0069B52B /* Supporting Files */,
 				6BD118351A8DE48B0069B52B /* AppDelegate.h */,
 				6BD118361A8DE48B0069B52B /* AppDelegate.m */,
 				6BD1185D1A8DF6BD0069B52B /* CollectionViewController.h */,
 				6BD1185E1A8DF6BD0069B52B /* CollectionViewController.m */,
 				6BD1183E1A8DE48B0069B52B /* Images.xcassets */,
 				6BD118401A8DE48B0069B52B /* LaunchScreen.xib */,
-				6BD118311A8DE48B0069B52B /* Supporting Files */,
 				6BD118381A8DE48B0069B52B /* TableViewController.h */,
 				6BD118391A8DE48B0069B52B /* TableViewController.m */,
 			);
@@ -129,8 +184,8 @@
 		6BD1184A1A8DE48B0069B52B /* BKDeltaCalculatorExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				6BD1184D1A8DE48B0069B52B /* BKDeltaCalculatorExampleTests.m */,
 				6BD1184B1A8DE48B0069B52B /* Supporting Files */,
+				6BD1184D1A8DE48B0069B52B /* BKDeltaCalculatorExampleTests.m */,
 			);
 			path = BKDeltaCalculatorExampleTests;
 			sourceTree = "<group>";
@@ -149,6 +204,7 @@
 				6BEE09EC19870A1800D73B41 /* BKDeltaCalculator */,
 				6BD118301A8DE48B0069B52B /* BKDeltaCalculatorExample */,
 				6BD1184A1A8DE48B0069B52B /* BKDeltaCalculatorExampleTests */,
+				6B7761471B1242CC00D24AFE /* BKDeltaCalculatorTests */,
 				6BEE09EB19870A1800D73B41 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -156,9 +212,10 @@
 		6BEE09EB19870A1800D73B41 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6BEE09EA19870A1800D73B41 /* libBKDeltaCalculator.a */,
+				6B7761371B1242CB00D24AFE /* BKDeltaCalculator.framework */,
 				6BD1182F1A8DE48B0069B52B /* BKDeltaCalculatorExample.app */,
 				6BD118471A8DE48B0069B52B /* BKDeltaCalculatorExampleTests.xctest */,
+				6B7761411B1242CC00D24AFE /* BKDeltaCalculatorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,9 +223,10 @@
 		6BEE09EC19870A1800D73B41 /* BKDeltaCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				6BB9564719ABC6AC00CBD3BB /* BKDelta_Internal.h */,
+				6B7761571B1242E100D24AFE /* Supporting Files */,
 				6BB9564419ABC52100CBD3BB /* BKDelta.h */,
 				6BB9564519ABC52100CBD3BB /* BKDelta.m */,
+				6BB9564719ABC6AC00CBD3BB /* BKDelta_Internal.h */,
 				6BEE09ED19870A1800D73B41 /* BKDeltaCalculator.h */,
 				6B168AF719ABBCD20040751B /* BKDeltaCalculator.m */,
 			);
@@ -177,7 +235,57 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		6B7761341B1242CB00D24AFE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B77615C1B12436E00D24AFE /* BKDelta.h in Headers */,
+				6B77615D1B12436E00D24AFE /* BKDelta_Internal.h in Headers */,
+				6B77615E1B12436E00D24AFE /* BKDeltaCalculator.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		6B7761361B1242CB00D24AFE /* BKDeltaCalculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B7761501B1242CC00D24AFE /* Build configuration list for PBXNativeTarget "BKDeltaCalculator" */;
+			buildPhases = (
+				6B7761321B1242CB00D24AFE /* Sources */,
+				6B7761331B1242CB00D24AFE /* Frameworks */,
+				6B7761341B1242CB00D24AFE /* Headers */,
+				6B7761351B1242CB00D24AFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BKDeltaCalculator;
+			productName = BKDeltaCalculator;
+			productReference = 6B7761371B1242CB00D24AFE /* BKDeltaCalculator.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6B7761401B1242CC00D24AFE /* BKDeltaCalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B7761541B1242CC00D24AFE /* Build configuration list for PBXNativeTarget "BKDeltaCalculatorTests" */;
+			buildPhases = (
+				6B77613D1B1242CC00D24AFE /* Sources */,
+				6B77613E1B1242CC00D24AFE /* Frameworks */,
+				6B77613F1B1242CC00D24AFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B7761441B1242CC00D24AFE /* PBXTargetDependency */,
+				6B7761461B1242CC00D24AFE /* PBXTargetDependency */,
+			);
+			name = BKDeltaCalculatorTests;
+			productName = BKDeltaCalculatorTests;
+			productReference = 6B7761411B1242CC00D24AFE /* BKDeltaCalculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		6BD1182E1A8DE48B0069B52B /* BKDeltaCalculatorExample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6BD118531A8DE48B0069B52B /* Build configuration list for PBXNativeTarget "BKDeltaCalculatorExample" */;
@@ -185,11 +293,12 @@
 				6BD1182B1A8DE48B0069B52B /* Sources */,
 				6BD1182C1A8DE48B0069B52B /* Frameworks */,
 				6BD1182D1A8DE48B0069B52B /* Resources */,
+				6B7761531B1242CC00D24AFE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6BD1185B1A8DF1120069B52B /* PBXTargetDependency */,
+				6B77614D1B1242CC00D24AFE /* PBXTargetDependency */,
 			);
 			name = BKDeltaCalculatorExample;
 			productName = BKDeltaCalculatorExample;
@@ -214,23 +323,6 @@
 			productReference = 6BD118471A8DE48B0069B52B /* BKDeltaCalculatorExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		6BEE09E919870A1800D73B41 /* BKDeltaCalculator */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6BEE09FE19870A1900D73B41 /* Build configuration list for PBXNativeTarget "BKDeltaCalculator" */;
-			buildPhases = (
-				6BEE09E619870A1800D73B41 /* Sources */,
-				6BEE09E719870A1800D73B41 /* Frameworks */,
-				6BEE09E819870A1800D73B41 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = BKDeltaCalculator;
-			productName = BKDeltaCalculator;
-			productReference = 6BEE09EA19870A1800D73B41 /* libBKDeltaCalculator.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -240,15 +332,19 @@
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "650 Industries, Inc.";
 				TargetAttributes = {
+					6B7761361B1242CB00D24AFE = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					6B7761401B1242CC00D24AFE = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 6BD1182E1A8DE48B0069B52B;
+					};
 					6BD1182E1A8DE48B0069B52B = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
 					6BD118461A8DE48B0069B52B = {
 						CreatedOnToolsVersion = 6.1.1;
 						TestTargetID = 6BD1182E1A8DE48B0069B52B;
-					};
-					6BEE09E919870A1800D73B41 = {
-						CreatedOnToolsVersion = 6.0;
 					};
 				};
 			};
@@ -265,20 +361,35 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6BEE09E919870A1800D73B41 /* BKDeltaCalculator */,
 				6BD1182E1A8DE48B0069B52B /* BKDeltaCalculatorExample */,
 				6BD118461A8DE48B0069B52B /* BKDeltaCalculatorExampleTests */,
+				6B7761361B1242CB00D24AFE /* BKDeltaCalculator */,
+				6B7761401B1242CC00D24AFE /* BKDeltaCalculatorTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6B7761351B1242CB00D24AFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B77613F1B1242CC00D24AFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6BD1182D1A8DE48B0069B52B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BD118421A8DE48B0069B52B /* LaunchScreen.xib in Resources */,
 				6BD1183F1A8DE48B0069B52B /* Images.xcassets in Resources */,
+				6BD118421A8DE48B0069B52B /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,14 +403,31 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6B7761321B1242CB00D24AFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B77615A1B12436400D24AFE /* BKDelta.m in Sources */,
+				6B77615B1B12436400D24AFE /* BKDeltaCalculator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B77613D1B1242CC00D24AFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B77614B1B1242CC00D24AFE /* BKDeltaCalculatorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6BD1182B1A8DE48B0069B52B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BD1185F1A8DF6BD0069B52B /* CollectionViewController.m in Sources */,
-				6BD1183A1A8DE48B0069B52B /* TableViewController.m in Sources */,
 				6BD118371A8DE48B0069B52B /* AppDelegate.m in Sources */,
+				6BD1185F1A8DF6BD0069B52B /* CollectionViewController.m in Sources */,
 				6BD118341A8DE48B0069B52B /* main.m in Sources */,
+				6BD1183A1A8DE48B0069B52B /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,27 +439,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6BEE09E619870A1800D73B41 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6BB9564619ABC52100CBD3BB /* BKDelta.m in Sources */,
-				6B168AF819ABBCD20040751B /* BKDeltaCalculator.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6B7761441B1242CC00D24AFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B7761361B1242CB00D24AFE /* BKDeltaCalculator */;
+			targetProxy = 6B7761431B1242CC00D24AFE /* PBXContainerItemProxy */;
+		};
+		6B7761461B1242CC00D24AFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6BD1182E1A8DE48B0069B52B /* BKDeltaCalculatorExample */;
+			targetProxy = 6B7761451B1242CC00D24AFE /* PBXContainerItemProxy */;
+		};
+		6B77614D1B1242CC00D24AFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B7761361B1242CB00D24AFE /* BKDeltaCalculator */;
+			targetProxy = 6B77614C1B1242CC00D24AFE /* PBXContainerItemProxy */;
+		};
 		6BD118491A8DE48B0069B52B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6BD1182E1A8DE48B0069B52B /* BKDeltaCalculatorExample */;
 			targetProxy = 6BD118481A8DE48B0069B52B /* PBXContainerItemProxy */;
-		};
-		6BD1185B1A8DF1120069B52B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6BEE09E919870A1800D73B41 /* BKDeltaCalculator */;
-			targetProxy = 6BD1185A1A8DF1120069B52B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -347,6 +476,98 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		6B7761511B1242CC00D24AFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BKDeltaCalculator/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6B7761521B1242CC00D24AFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = BKDeltaCalculator/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6B7761551B1242CC00D24AFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BKDeltaCalculatorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BKDeltaCalculatorExample.app/BKDeltaCalculatorExample";
+			};
+			name = Debug;
+		};
+		6B7761561B1242CC00D24AFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = BKDeltaCalculatorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BKDeltaCalculatorExample.app/BKDeltaCalculatorExample";
+			};
+			name = Release;
+		};
 		6BD1184F1A8DE48B0069B52B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -485,27 +706,27 @@
 			};
 			name = Release;
 		};
-		6BEE09FF19870A1900D73B41 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		6BEE0A0019870A1900D73B41 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6B7761501B1242CC00D24AFE /* Build configuration list for PBXNativeTarget "BKDeltaCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B7761511B1242CC00D24AFE /* Debug */,
+				6B7761521B1242CC00D24AFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B7761541B1242CC00D24AFE /* Build configuration list for PBXNativeTarget "BKDeltaCalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B7761551B1242CC00D24AFE /* Debug */,
+				6B7761561B1242CC00D24AFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6BD118531A8DE48B0069B52B /* Build configuration list for PBXNativeTarget "BKDeltaCalculatorExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -529,15 +750,6 @@
 			buildConfigurations = (
 				6BEE09FC19870A1900D73B41 /* Debug */,
 				6BEE09FD19870A1900D73B41 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6BEE09FE19870A1900D73B41 /* Build configuration list for PBXNativeTarget "BKDeltaCalculator" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6BEE09FF19870A1900D73B41 /* Debug */,
-				6BEE0A0019870A1900D73B41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

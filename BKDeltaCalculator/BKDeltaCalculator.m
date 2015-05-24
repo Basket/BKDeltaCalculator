@@ -1,10 +1,10 @@
 // Copyright 2014-present 650 Industries.
 // Copyright 2014-present Andrew Toulouse.
 
-#import "BKDeltaCalculator.h"
+#import <BKDeltaCalculator/BKDeltaCalculator.h>
 
-#import "BKDelta.h"
-#import "BKDelta_Internal.h"
+#import <BKDeltaCalculator/BKDelta.h>
+#import <BKDeltaCalculator/BKDelta_Internal.h>
 
 const delta_calculator_equality_test_t BKDeltaCalculatorStrictEqualityTest = ^BOOL(id a, id b) {
     return a == b;
